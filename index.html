@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seif Khalaf Aiad | Creative & Production Executive Portfolio</title>
+
+  <!-- Scripts & Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind Configuration for custom colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0a0a0a',
+            accent: '#f27d26',
+            ink: '#ffffff',
+            muted: '#888888',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans Arabic', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-bg text-ink font-sans antialiased">
+
+  <!-- Navbar -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-6 bg-gradient-to-b from-bg to-transparent">
+    <div class="text-xl font-bold tracking-tighter uppercase">S.K.A</div>
+    <div
+      class="flex gap-8 text-sm font-medium uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity">
+      <a href="#about" class="hover:text-accent">About</a>
+      <a href="#work" class="hover:text-accent">Work</a>
+      <a href="#skills" class="hover:text-accent">Skills</a>
+      <a href="#contact" class="hover:text-accent">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex flex-col justify-center items-center overflow-hidden px-4">
+      <div class="text-center z-10 hero-parallax">
+        <span id="hero-tagline" class="text-accent uppercase tracking-[0.5em] text-sm mb-4 block"
+          style="opacity: 1;"></span>
+        <h1 id="hero-title-en" class="text-7xl md:text-9xl magazine-title mb-6 leading-none"></h1>
+        <p id="hero-summary" class="max-w-2xl mx-auto text-muted text-lg md:text-xl font-light leading-relaxed mb-8">
+        </p>
+        <a href="Seif_Khalaf_Aiad_CV_2026.pdf" download
+          class="inline-flex items-center gap-2 px-8 py-4 bg-accent text-bg font-bold rounded-full hover:scale-105 transition-transform">
+          <i data-lucide="download" style="width: 20px; height: 20px;"></i>
+          Download CV
+        </a>
+      </div>
+
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted animate-bounce">
+        <i data-lucide="chevron-down" size="32"></i>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div class="absolute top-1/4 -left-20 w-96 h-96 bg-accent/10 rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px]"></div>
+    </section>
+
+    <!-- About Section (Experience) -->
+    <section id="about" class="py-32 px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-sm text-accent uppercase tracking-[0.3em] mb-4">Professional Experience</h2>
+          <h3 class="text-5xl magazine-title mb-12">A Journey of Creativity & Technical Excellence</h3>
+
+          <div id="experience-list" class="space-y-0">
+            <!-- Experiences injected by JS -->
+          </div>
+        </div>
+
+        <div class="sticky top-32 h-fit">
+          <div class="aspect-square glass-card overflow-hidden relative group">
+            <img src="images/Dress/1772216745373-019ca058-ce39-70e7-aac1-037b20207585.jpg" alt="Creative Workspace"
+              class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000" />
+            <div class="absolute inset-0 flex items-center justify-center p-12 text-center">
+              <p class="text-2xl font-serif italic leading-relaxed">
+                "I believe that design is not just a beautiful shape, but a technical and practical solution that serves
+                brand goals."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 px-8 max-w-7xl mx-auto">
+      <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Skills injected by JS -->
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="py-32 px-8">
+      <div class="max-w-7xl mx-auto mb-16 flex justify-between items-end">
+        <div>
+          <h2 class="text-5xl magazine-title mb-4">Portfolio Albums</h2>
+          <p class="text-muted max-w-md">A curated selection of designs and products executed for major global brands.
+            Click to view the album.</p>
+        </div>
+        <div class="text-accent font-mono text-sm uppercase tracking-widest" id="project-count">
+          <!-- Updated by JS if needed -->
+        </div>
+      </div>
+
+      <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <!-- Portfolio albums injected by JS -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-8 bg-white/5">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-6xl magazine-title mb-8">Let's Work Together</h2>
+          <p class="text-xl text-muted mb-12 leading-relaxed">
+            Have a project that needs a professional creative touch? I'm available for collaborations on projects of all
+            sizes.
+          </p>
+
+          <div class="space-y-6">
+            <a href="mailto:seifkhalafaiad@gmail.com"
+              class="flex items-center gap-4 text-2xl hover:text-accent transition-colors">
+              <i data-lucide="mail" class="text-accent"></i>
+              seifkhalafaiad@gmail.com
+            </a>
+            <a href="tel:01070878825" class="flex items-center gap-4 text-2xl hover:text-accent transition-colors">
+              <i data-lucide="phone" class="text-accent"></i>
+              0107 087 8825
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-card p-12">
+          <div class="flex flex-col gap-6">
+            <a href="https://linkedin.com/in/seif-k-aiad" target="_blank"
+              class="flex justify-between items-center p-6 bg-white/5 rounded-xl hover:bg-accent hover:text-bg transition-all group">
+              <div class="flex items-center gap-4">
+                <i data-lucide="linkedin" size="32"></i>
+                <span class="text-xl font-bold">LinkedIn</span>
+              </div>
+              <i data-lucide="external-link" class="opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-6 bg-white/5 rounded-xl text-center">
+                <div class="text-4xl font-bold text-accent mb-2">+10</div>
+                <div class="text-xs uppercase tracking-widest text-muted">Years Exp</div>
+              </div>
+              <div class="p-6 bg-white/5 rounded-xl text-center">
+                <div class="text-4xl font-bold text-accent mb-2">+150k</div>
+                <div class="text-xs uppercase tracking-widest text-muted">Design Assets</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 px-8 border-t border-white/10 text-center text-muted text-sm tracking-widest uppercase">
+    © <span id="current-year"></span> Seif Khalaf Aiad. All Rights Reserved.
+  </footer>
+
+  <!-- Fullscreen Gallery Modal -->
+  <div id="modal-gallery" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-xl">
+    <button id="modal-close" class="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[101]">
+      <i data-lucide="x" style="width: 40px; height: 40px;"></i>
+    </button>
+
+    <div class="absolute top-8 left-8 z-[101]">
+      <h3 id="modal-title" class="text-2xl font-bold text-white"></h3>
+      <p id="modal-counter" class="text-accent text-sm tracking-widest uppercase mt-1"></p>
+    </div>
+
+    <div class="relative w-full max-w-6xl h-[80vh] flex items-center justify-center px-16">
+      <button id="modal-prev"
+        class="absolute left-4 lg:left-0 p-4 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all">
+        <i data-lucide="chevron-left" style="width: 48px; height: 48px;"></i>
+      </button>
+
+      <div class="w-full h-full flex items-center justify-center p-4" onclick="event.stopPropagation()">
+        <img id="modal-img" src="" alt="" class="modal-content-img rounded-xl shadow-2xl">
+      </div>
+
+      <button id="modal-next"
+        class="absolute right-4 lg:right-0 p-4 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all">
+        <i data-lucide="chevron-right" style="width: 48px; height: 48px;"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/201070878825" target="_blank"
+    class="fixed bottom-8 right-8 z-[90] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center">
+    <i data-lucide="message-circle" style="width: 32px; height: 32px;"></i>
+  </a>
+
+  <script src="script.js?v=1.1"></script>
+</body>
+
+</html>
