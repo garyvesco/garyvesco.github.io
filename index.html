@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seif Khalaf Aiad | Creative & Production Executive Portfolio</title>
+  <title>Seif Elzayat | Creative & Production Executive Portfolio</title>
 
   <!-- Scripts & Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -34,10 +34,15 @@
 
 <body class="bg-bg text-ink font-sans antialiased">
 
+  <!-- === DEPTH: Scroll Progress Bar === -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
   <!-- Navbar -->
   <nav
     class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-6 bg-gradient-to-b from-bg to-transparent">
-    <div class="text-xl font-bold tracking-tighter uppercase">S.K.A</div>
+    <a href="#hero" class="flex items-center">
+      <img src="seif_logo.png" alt="Seif Elzayat Logo" class="navbar-logo">
+    </a>
     <div
       class="flex gap-8 text-sm font-medium uppercase tracking-widest opacity-70 hover:opacity-100 transition-opacity">
       <a href="#about" class="hover:text-accent">About</a>
@@ -50,10 +55,13 @@
   <main>
     <!-- Hero Section -->
     <section id="hero" class="relative h-screen flex flex-col justify-center items-center overflow-hidden px-4">
+      <!-- === DEPTH: Hero Vignette Overlay === -->
+      <div class="hero-vignette"></div>
+
       <div class="text-center z-10 hero-parallax">
         <span id="hero-tagline" class="text-accent uppercase tracking-[0.5em] text-sm mb-4 block"
           style="opacity: 1;"></span>
-        <h1 id="hero-title-en" class="text-7xl md:text-9xl magazine-title mb-6 leading-none"></h1>
+        <h1 id="hero-title-en" class="text-7xl md:text-9xl magazine-title mb-6 leading-none hero-breathing"></h1>
         <p id="hero-summary" class="max-w-2xl mx-auto text-muted text-lg md:text-xl font-light leading-relaxed mb-8">
         </p>
         <a href="Seif_Khalaf_Aiad_CV_2026.pdf" download
@@ -67,9 +75,42 @@
         <i data-lucide="chevron-down" size="32"></i>
       </div>
 
-      <!-- Decorative Elements -->
-      <div class="absolute top-1/4 -left-20 w-96 h-96 bg-accent/10 rounded-full blur-[120px]"></div>
-      <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px]"></div>
+      <!-- Decorative Elements (animated) -->
+      <div id="hero-blob-1"
+        class="absolute top-1/4 -left-20 w-96 h-96 bg-accent/10 rounded-full blur-[120px] hero-blob-float"
+        data-depth="3"></div>
+      <div id="hero-blob-2"
+        class="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px] hero-blob-float-alt"
+        data-depth="3"></div>
+      <!-- === DEPTH: Rotating accent ring === -->
+      <div class="hero-ring" data-depth="2"></div>
+    </section>
+
+    <!-- Infinite Carousel Section -->
+    <section id="carousel-section" class="py-20 overflow-hidden relative">
+      <!-- Section Header -->
+      <div class="max-w-7xl mx-auto px-8 mb-12 text-center">
+        <h2 class="text-sm text-accent uppercase tracking-[0.3em] mb-4">Featured Work</h2>
+        <h3 class="text-4xl md:text-5xl magazine-title">Creative Portfolio Showcase</h3>
+      </div>
+
+      <!-- Carousel Row 1 (scrolls left) -->
+      <div class="carousel-container mb-6">
+        <div class="carousel-track carousel-track--left" id="carousel-row-1">
+          <!-- Images injected by JS -->
+        </div>
+      </div>
+
+      <!-- Carousel Row 2 (scrolls right) -->
+      <div class="carousel-container">
+        <div class="carousel-track carousel-track--right" id="carousel-row-2">
+          <!-- Images injected by JS -->
+        </div>
+      </div>
+
+      <!-- Gradient edge overlays -->
+      <div class="carousel-fade-left"></div>
+      <div class="carousel-fade-right"></div>
     </section>
 
     <!-- About Section (Experience) -->
@@ -89,9 +130,9 @@
             <img src="images/Dress/1772216745373-019ca058-ce39-70e7-aac1-037b20207585.jpg" alt="Creative Workspace"
               class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000" />
             <div class="absolute inset-0 flex items-center justify-center p-12 text-center">
-              <p class="text-2xl font-serif italic leading-relaxed">
-                "I believe that design is not just a beautiful shape, but a technical and practical solution that serves
-                brand goals."
+              <p id="typing-quote" class="text-2xl font-serif italic leading-relaxed"
+                data-quote="&quot;I believe that design is not just a beautiful shape, but a technical and practical solution that serves brand goals.&quot;">
+                <span class="typing-cursor"></span>
               </p>
             </div>
           </div>
@@ -160,11 +201,12 @@
 
             <div class="grid grid-cols-2 gap-4">
               <div class="p-6 bg-white/5 rounded-xl text-center">
-                <div class="text-4xl font-bold text-accent mb-2">+10</div>
+                <div class="text-4xl font-bold text-accent mb-2 count-up" data-count="10" data-prefix="+">+0</div>
                 <div class="text-xs uppercase tracking-widest text-muted">Years Exp</div>
               </div>
               <div class="p-6 bg-white/5 rounded-xl text-center">
-                <div class="text-4xl font-bold text-accent mb-2">+150k</div>
+                <div class="text-4xl font-bold text-accent mb-2 count-up" data-count="150" data-prefix="+"
+                  data-suffix="k">+0</div>
                 <div class="text-xs uppercase tracking-widest text-muted">Design Assets</div>
               </div>
             </div>
@@ -175,7 +217,10 @@
   </main>
 
   <footer class="py-12 px-8 border-t border-white/10 text-center text-muted text-sm tracking-widest uppercase">
-    © <span id="current-year"></span> Seif Khalaf Aiad. All Rights Reserved.
+    <div class="flex flex-col items-center gap-4">
+      <img src="seif_logo.png" alt="Seif Elzayat Logo" class="footer-logo">
+      <span>© <span id="current-year"></span> Seif Elzayat. All Rights Reserved.</span>
+    </div>
   </footer>
 
   <!-- Fullscreen Gallery Modal -->
@@ -206,11 +251,14 @@
     </div>
   </div>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/201070878825" target="_blank"
-    class="fixed bottom-8 right-8 z-[90] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center">
-    <i data-lucide="message-circle" style="width: 32px; height: 32px;"></i>
-  </a>
+  <!-- Floating WhatsApp Button (with ripple) -->
+  <div class="whatsapp-wrapper">
+    <span class="whatsapp-ripple"></span>
+    <span class="whatsapp-ripple whatsapp-ripple--delay"></span>
+    <a href="https://wa.me/201070878825" target="_blank" class="whatsapp-btn">
+      <i data-lucide="message-circle" style="width: 32px; height: 32px;"></i>
+    </a>
+  </div>
 
   <script src="script.js?v=1.1"></script>
 </body>
